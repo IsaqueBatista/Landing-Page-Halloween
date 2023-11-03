@@ -11,7 +11,7 @@ body {
 
   width: 100%;
   min-height: 100vh;
-  padding: 20px 165px 0;
+  padding: 0 165px 0;
 
   overflow-y: scroll;
   scrollbar-width: none;
@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 .main {
   background: linear-gradient(182deg, rgba(91, 135, 75, 0.97) 12.91%, rgba(12, 55, 32, 0.87) 87.68%);
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 
@@ -50,6 +51,7 @@ nav {
   color: #f8f8fd;
   text-decoration: none;
   position: relative;
+  margin: 10px;
 }
 
 /* Efeito nos links */
@@ -256,4 +258,22 @@ section {
   to {
     transform: translate(0, 0) rotate(-15deg);
   }
+}
+
+
+
+
+/* ------- Responsive -------- */
+
+@media screen and (max-width: 1000px) {
+  header a {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: start;
+    padding-left: 20px;
+  }
+
 }
