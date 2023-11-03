@@ -7,17 +7,33 @@
 }
 
 body {
-  background: linear-gradient(136deg, rgba(91, 135, 75, 0.97) 12.91%, rgba(12, 55, 32, 0.87) 87.68%);
+  background: linear-gradient(136deg, rgb(90, 132, 72) 12.91%, rgb(10, 46, 26) 87.68%);
+
   width: 100%;
   min-height: 100vh;
-  padding: 40px 165px; 
+  padding: 20px 165px 0;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+  /* Oculta a barra de rolagem no Chrome */
+}
+
+.main {
+  background: linear-gradient(182deg, rgba(91, 135, 75, 0.97) 12.91%, rgba(12, 55, 32, 0.87) 87.68%);
+  padding-bottom: 20px;
+}
+
 
 header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-top: 10px;
   margin-bottom: 140px;
 }
 
@@ -52,6 +68,10 @@ nav {
   width: 100%;
 }
 
+.nav-link {
+  z-index: 1;
+}
+
 .btn-link {
   padding: 10px 20px;
   border: 1px solid #f8f8fd;
@@ -77,11 +97,11 @@ section {
 }
 
 .container-left img {
-  width: 85%;
+  width: 650px;
   position: absolute;
   bottom: 60px;
   left: -50px;
-  /* animation: moveAbobora 2s infinite alternate ease-in-out; */
+  animation: moveAbobora 2s infinite alternate ease-in-out;
 
 
 }
@@ -161,4 +181,79 @@ section {
   line-height: 180%;
   opacity: 0.8;
   width: 445px;
+
+  margin-top: 25px;
+}
+
+/* --------- */
+
+
+.container-actions {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 50px;
+}
+
+.container-actions button {
+  color: #303056;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  background: none;
+  background-image: url("./assets//Btn.svg");
+  border: none;
+
+  width: 169px;
+  height: 83px;
+}
+
+.container-actions a {
+  color: #FFF;
+
+  text-align: right;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container-actions a img {
+  margin-left: 12px;
+}
+
+/* --------- */
+
+.button-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto 49px;
+  background: none;
+  border: none;
+  background-image: url("./assets/Btn2.svg");
+
+  width: 188px;
+  height: 90px;
+
+  color: #FFF;
+
+
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+@keyframes moveAbobora {
+  from {
+    transform: translate(-5%, -5%) rotate(15deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(-15deg);
+  }
 }
