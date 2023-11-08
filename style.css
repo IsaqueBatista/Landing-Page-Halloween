@@ -248,6 +248,10 @@ section {
   margin-bottom: 20px;
 }
 
+button {
+  cursor: pointer;
+}
+
 @keyframes moveAbobora {
   from {
     transform: translate(-5%, -5%) rotate(15deg);
